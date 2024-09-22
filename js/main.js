@@ -171,33 +171,36 @@ function toggleChatbox() {
 
 
 //Missio, vision and values animation click
-const flipBoxes = document.querySelectorAll('.ee-flip-box');
+window.addEventListener('load', function () {
+    const flipBoxes = document.querySelectorAll('.ee-flip-box');
 
-function handleClick() {
-    const innerBox = this.querySelector('.ee-flip-box-inner');
-    innerBox.style.transform = innerBox.style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
-}
+    function handleClick() {
+        const innerBox = this.querySelector('.ee-flip-box-inner');
+        innerBox.style.transform = innerBox.style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+    }
 
-if (window.innerWidth < 992) {
-    flipBoxes.forEach(box => {
-        box.style.cursor = 'pointer'; // Muda o cursor para mãozinha
-        box.addEventListener('click', handleClick);
-    });
-}
-
-// Adiciona um listener para ajuste ao redimensionar a janela
-window.addEventListener('resize', () => {
-    if (window.innerWidth >= 992) {
-        flipBoxes.forEach(box => {
-            box.style.cursor = 'default'; // Reseta o cursor se a tela for maior
-            box.removeEventListener('click', handleClick); // Remove o evento de clique
-            const innerBox = box.querySelector('.ee-flip-box-inner');
-            innerBox.style.transform = 'rotateY(0deg)'; // Reseta a rotação
-        });
-    } else {
+    // Verifica o tamanho da tela ao carregar a página
+    if (window.innerWidth <= 992) {
         flipBoxes.forEach(box => {
             box.style.cursor = 'pointer'; // Muda o cursor para mãozinha
             box.addEventListener('click', handleClick);
         });
     }
+
+    // Monitora redimensionamento da tela
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 992) {
+            flipBoxes.forEach(box => {
+                box.style.cursor = 'default'; // Reseta o cursor
+                box.removeEventListener('click', handleClick); // Remove evento de clique
+                const innerBox = box.querySelector('.ee-flip-box-inner');
+                innerBox.style.transform = 'rotateY(0deg)'; // Reseta a rotação
+            });
+        } else {
+            flipBoxes.forEach(box => {
+                box.style.cursor = 'pointer'; // Muda o cursor para mãozinha
+                box.addEventListener('click', handleClick);
+            });
+        }
+    });
 });

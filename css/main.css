@@ -947,11 +947,20 @@ body {
 
 }
 
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+
+    .ee-cultura-logo {
+        width: 32%;
+        right: 31%;
+    }
+
+}
 
 @media screen and (min-width: 1024px) {
 
     .ee-cultura-logo {
+        width: 37%;
+        right: 30%;
         top: -168%;
     }
 
