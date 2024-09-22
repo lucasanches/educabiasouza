@@ -312,24 +312,6 @@ body {
         margin-left: -20px;
     }
 
-    .ee-text-content {
-        color: #fff;
-    }
-
-    .ee-text-content h1 {
-        font-family: 'League Spartan', sans-serif;
-        font-size: 22px;
-        font-weight: bold;
-        margin-bottom: 35px;
-    }
-
-    .ee-text-content p {
-        font-family: 'Glacial Indifference', sans-serif;
-        font-size: 18px;
-        text-align: justify;
-        margin-bottom: 12px;
-    }
-
 
     /*Whatsapp Widget*/
     .WA_Chat_Widget * {
@@ -704,6 +686,25 @@ body {
         color: #000;
     }
 
+    /* About section */
+    .ee-text-content {
+        color: #fff;
+    }
+
+    .ee-text-content h1 {
+        font-family: 'League Spartan', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 35px;
+    }
+
+    .ee-text-content p {
+        font-family: 'Glacial Indifference', sans-serif;
+        font-size: 14px;
+        text-align: justify;
+        margin-bottom: 12px;
+    }
+
     /* Mission, vision and values */
     .ee-box {
         position: relative;
@@ -948,11 +949,37 @@ body {
 
 @media screen and (min-width: 992px) {}
 
+@media screen and (min-width: 1024px) {
+
+    .ee-cultura-logo {
+        top: -168%;
+    }
+
+    .ee-cultura-text {
+        font-size: 40px;
+    }
+
+    .ee-text-content h1 {
+        font-size: 22px;
+    }
+
+    .ee-text-content p {
+        font-size: 18px;
+    }
+
+}
+
 @media screen and (min-width: 1200px) {
 
-    /*Animacao do logo da pagina inicial*/
+    /* Menu - Topbar */
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    /*Logo animation home*/
     .ee-middle-text-container {
         position: absolute;
+        display: block;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -1022,7 +1049,6 @@ body {
         transform: translateX(200px);
     }
 
-    /* Exibir o texto no centro */
     .ee-show-text {
         opacity: 1;
         transform: translate(-50%, -50%);
@@ -1034,7 +1060,6 @@ body {
         animation-name: slideIn;
     }
 
-    /* Ocultar o texto central */
     .ee-hide-text {
         opacity: 0;
         transform: right center;
@@ -1046,7 +1071,6 @@ body {
         animation-name: slideOut;
     }
 
-    /* Retornar texto e imagem ao centro */
     .ee-return .ee-text-container {
         transform: translateX(0);
     }
@@ -1173,7 +1197,7 @@ body {
     .ee-values-list {
         list-style-type: none;
         padding: 35px 0 0 5px;
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .ee-values-list li {
@@ -1298,7 +1322,44 @@ body {
 
 }
 
-@media screen and (min-width: 1364px) {}
+@media screen and (min-width: 1364px) {
+
+    /* Menu - Topbar */
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    .ee-btn-lg {
+        font-size: 18px;
+    }
+
+    /* About Section */
+    .ee-text-content h1 {
+        font-size: 24px;
+    }
+
+    .ee-text-content p {
+        font-size: 20px;
+    }
+
+    /* Mission, vision and values */
+    .ee-values-text {
+        padding: 400px 25px 0 0;
+    }
+
+    .ee-back-text {
+        font-size: 20px;
+    }
+
+    .ee-values-list {
+        font-size: 20px;
+    }
+
+}
 
 @media screen and (min-width: 1600px) {}
 

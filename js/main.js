@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     culturaTrigger.classList.remove('ee-cultura-animate');
                 }
             },
-            offset: '40%'
+            offset: '60%'
         });
 
         // Waypoint para fazer a seção Cultura desaparecer quando o rodapé for alcançado
