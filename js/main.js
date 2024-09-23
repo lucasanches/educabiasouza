@@ -41,43 +41,6 @@ var arrow_down_waypoint = new Waypoint({
 });
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    var culturaSection = document.getElementById('ee-cultura-section');
-    var culturaTrigger = document.querySelector('.ee-cultura-trigger');
-    var footer = document.querySelector('footer'); // Referência ao rodapé
-
-    if (culturaSection && culturaTrigger && footer) {
-        // Waypoint para quando rolar para baixo e a seção Cultura aparecer
-        new Waypoint({
-            element: culturaSection,
-            handler: function (direction) {
-                if (direction === 'down') {
-                    culturaTrigger.classList.add('ee-cultura-animate');
-                } else {
-                    culturaTrigger.classList.remove('ee-cultura-animate');
-                }
-            },
-            offset: '60%'
-        });
-
-        // Waypoint para fazer a seção Cultura desaparecer quando o rodapé for alcançado
-        new Waypoint({
-            element: footer,
-            handler: function (direction) {
-                if (direction === 'down') {
-                    culturaTrigger.classList.remove('ee-cultura-animate');
-                } else {
-                    culturaTrigger.classList.add('ee-cultura-animate');
-                }
-            },
-            offset: '100%' // Dispara quando o rodapé está visível
-        });
-    } else {
-        console.error("Alguns elementos não foram encontrados.");
-    }
-});
-
-
 
 let stage = 0;
 let animationActive = false; // Controle de execução da animação
@@ -179,28 +142,41 @@ window.addEventListener('load', function () {
         innerBox.style.transform = innerBox.style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
     }
 
-    // Verifica o tamanho da tela ao carregar a página
-    if (window.innerWidth <= 992) {
+    // Função para ativar eventos de clique em telas pequenas
+    function enableClickEvents() {
         flipBoxes.forEach(box => {
-            box.style.cursor = 'pointer'; // Muda o cursor para mãozinha
+            box.style.cursor = 'pointer';
             box.addEventListener('click', handleClick);
         });
     }
 
-    // Monitora redimensionamento da tela
-    window.addEventListener('resize', () => {
-        if (window.innerWidth >= 992) {
-            flipBoxes.forEach(box => {
-                box.style.cursor = 'default'; // Reseta o cursor
-                box.removeEventListener('click', handleClick); // Remove evento de clique
-                const innerBox = box.querySelector('.ee-flip-box-inner');
-                innerBox.style.transform = 'rotateY(0deg)'; // Reseta a rotação
-            });
-        } else {
-            flipBoxes.forEach(box => {
-                box.style.cursor = 'pointer'; // Muda o cursor para mãozinha
-                box.addEventListener('click', handleClick);
-            });
-        }
-    });
+    // Verifica o tamanho da tela ao carregar a página
+    if (window.innerWidth <= 992) {
+        enableClickEvents();
+    }
+});
+
+
+window.addEventListener('load', function () {
+    var culturaSection = document.getElementById('ee-cultura-section');
+    var culturaTrigger = document.querySelector('.ee-cultura-trigger');
+    var footer = document.querySelector('footer'); // Referência ao rodapé
+
+    if (culturaSection && culturaTrigger && footer) {
+        // Waypoint para quando rolar para baixo e a seção Cultura aparecer
+        new Waypoint({
+            element: culturaSection,
+            handler: function (direction) {
+                if (direction === 'down') {
+                    culturaTrigger.classList.add('ee-cultura-animate');
+                } else {
+                    culturaTrigger.classList.remove('ee-cultura-animate');
+                }
+            },
+            offset: '60%'
+        });
+
+    } else {
+        console.error("Alguns elementos não foram encontrados.");
+    }
 });

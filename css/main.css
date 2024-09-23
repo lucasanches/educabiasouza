@@ -214,6 +214,20 @@ body {
         position: relative;
     }
 
+    .ee-section-md {
+        width: 100%;
+        height: 75vh;
+        display: table;
+        position: relative;
+    }
+
+    .ee-section-sm {
+        width: 100%;
+        height: 35vh;
+        display: table;
+        position: relative;
+    }
+
     .ee-first-section {
         width: 100%;
         height: 82.4vh;
@@ -579,27 +593,30 @@ body {
         align-self: flex-start;
     }
 
-    .ee-footer-social-section {
-        text-align: right;
-    }
-
     .ee-footer-social-icons {
         list-style: none;
         padding: 0;
         margin: 0 0 10px;
         display: flex;
         justify-content: flex-end;
-        gap: 10px;
+        gap: 15px;
     }
 
-    .ee-social-icon {
-        width: 50px;
+    .ee-footer-social-icons li {
+        display: inline-block;
+    }
+
+    .ee-footer-social-icons a {
+        color: #545454;
+        font-size: 40px;
         transition: transform 0.3s ease;
     }
 
-    .ee-social-icon:hover {
+    .ee-footer-social-icons a:hover {
         transform: scale(1.1);
+        color: #f3c072;
     }
+
 
     .ee-footer-rights {
         text-align: center;
@@ -732,9 +749,9 @@ body {
         transition: transform 0.6s;
     }
 
-    /* .ee-flip-box:hover .ee-flip-box-inner {
+    .ee-flip-box:hover .ee-flip-box-inner {
         transform: rotateY(180deg);
-    } */
+    }
 
     .ee-flip-box-front,
     .ee-flip-box-back {
@@ -774,7 +791,7 @@ body {
     .ee-back-text {
         margin-top: 45px;
         padding: 0 20px;
-        font-size: 13px;
+        font-size: 12px;
         color: #fff;
         text-align: center;
     }
@@ -796,7 +813,7 @@ body {
     }
 
     .ee-mission-text {
-        padding: 27px 0 0 25px;
+        padding: 27px 0 0 18px;
         justify-content: start;
         align-items: start;
     }
@@ -819,7 +836,7 @@ body {
     .ee-values-list {
         list-style-type: none;
         padding: 35px 0 0 5px;
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .ee-values-list li {
@@ -905,17 +922,17 @@ body {
         display: block;
         position: relative;
         top: -1200%;
-        left: 9%;
+        left: 15%;
         opacity: 0;
         transform: translateX(50px);
         transition: opacity 0.2s ease-out, transform 0.2s ease-out;
     }
 
     .ee-cultura-logo {
-        width: 40%;
+        width: 305px;
         height: auto;
         position: absolute;
-        right: 28%;
+        right: 30%;
         bottom: -68%;
         opacity: 0;
         transform: scaleX(0);
@@ -954,18 +971,65 @@ body {
         right: 31%;
     }
 
+    .ee-back-title {
+        font-size: 26px;
+    }
+
+    .ee-back-text {
+        font-size: 17px;
+    }
+
+    .ee-values-list {
+        font-size: 17px;
+    }
+
 }
 
 @media screen and (min-width: 1024px) {
 
     .ee-cultura-logo {
-        width: 37%;
+        width: 405px;
         right: 30%;
         top: -168%;
     }
 
     .ee-cultura-text {
         font-size: 40px;
+    }
+
+    .ee-mission-icon,
+    .ee-vision-icon,
+    .ee-values-icon {
+        height: 5em;
+    }
+
+    .ee-mission-icon {
+        left: 88px;
+        top: -69px;
+    }
+
+    .ee-vision-icon {
+        top: -31px;
+    }
+
+    .ee-values-icon {
+        bottom: 40px;
+    }
+
+    .ee-mission-text h3 {
+        font-size: 35px;
+    }
+
+    .ee-vision-text h3 {
+        font-size: 35px;
+    }
+
+    .ee-values-text {
+        padding: 325px 25px 0 0;
+    }
+
+    .ee-values-text h3 {
+        font-size: 35px;
     }
 
     .ee-text-content h1 {
@@ -976,14 +1040,21 @@ body {
         font-size: 18px;
     }
 
+    .ee-back-title {
+        font-size: 28px;
+    }
+
+    .ee-back-text {
+        font-size: 19px;
+    }
+
+    .ee-values-list {
+        font-size: 19px;
+    }
+
 }
 
 @media screen and (min-width: 1200px) {
-
-    /* Menu - Topbar */
-    header nav ul li a {
-        font-size: 20px;
-    }
 
     /*Logo animation home*/
     .ee-middle-text-container {
@@ -1089,244 +1160,39 @@ body {
     }
 
     /* Mission, vision and values */
-    .ee-box {
-        position: relative;
-        width: 100%;
-        height: 50vh;
-        background: rgba(65, 95, 125, 0.24);
-        border-radius: 40px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        perspective: 1000px;
-    }
-
-    .ee-flip-box {
-        position: relative;
-        width: 100%;
-    }
-
-    .ee-flip-box-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        transform-style: preserve-3d;
-        transition: transform 0.6s;
-    }
-
-    .ee-flip-box:hover .ee-flip-box-inner {
-        transform: rotateY(180deg);
-    }
-
-    .ee-flip-box-front,
-    .ee-flip-box-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-    }
-
-    .ee-flip-box-front {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .ee-flip-box-front h3 {
-        font-size: 48px;
-    }
-
-    .ee-flip-box-back {
-        background-color: rgba(65, 95, 125, 0.8);
-        border-radius: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        transform: rotateY(180deg);
-        padding: 20px;
-        position: relative;
-    }
-
-    .ee-back-title {
-        position: absolute;
-        top: 15px;
-        font-size: 35px;
-        color: #eda332;
-        font-weight: bold;
-    }
-
-    .ee-back-text {
-        margin-top: 45px;
-        padding: 0 35px;
-        font-size: 16px;
-        color: #fff;
-        text-align: center;
-    }
-
-    .ee-back-quote {
-        position: absolute;
-        width: 240px;
-        height: auto;
-    }
-
-    .ee-quote-left {
-        top: 22px;
-        left: -83px;
-    }
-
-    .ee-quote-right {
-        bottom: -8px;
-        right: -73px;
-    }
-
-    .ee-mission-text {
-        padding: 27px 0 0 25px;
-        justify-content: start;
-        align-items: start;
-    }
-
-    .ee-vision-text {
-        padding-top: 100px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .ee-values-text {
-        padding: 285px 25px 0 0;
-        align-items: end;
-    }
-
-    .ee-flip-box-back p {
-        color: #fff;
-    }
-
-    .ee-values-list {
-        list-style-type: none;
-        padding: 35px 0 0 5px;
-        font-size: 16px;
-    }
-
-    .ee-values-list li {
-        padding: 6px 0 0 28px;
-        position: relative;
-        line-height: 1.5;
-        color: #fff;
-    }
-
-    .ee-values-list li:before {
-        content: "";
-        background-image: url('/images/estrela-icon.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 60px;
-        height: 60px;
-        position: absolute;
-        margin-left: -71px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-
-    .ee-box h3 {
-        margin: 0;
-    }
-
     .ee-mission-icon,
     .ee-vision-icon,
     .ee-values-icon {
         height: 6em;
-        position: relative;
     }
 
-
     .ee-mission-icon {
-        left: 130px;
-        top: -86px;
+        left: 116px;
+        top: -83px;
     }
 
     .ee-vision-icon {
-        left: 2px;
-        top: -35px;
+        top: -36px;
     }
 
     .ee-values-icon {
-        right: -35px;
-        bottom: 50px;
+        bottom: 47px;
     }
 
-    .ee-cultura-trigger {
-        position: absolute;
-        margin-top: 2%;
-        right: 0;
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: start;
-        opacity: 0;
-        transition: opacity 0.2s ease;
-        overflow: visible;
+    .ee-mission-text h3 {
+        font-size: 45px;
     }
 
-    .ee-cultura-line-container {
-        width: 0;
-        overflow: hidden;
-        transition: width 0.2s ease-out;
+    .ee-vision-text h3 {
+        font-size: 45px;
     }
 
-    .ee-cultura-line {
-        width: 100%;
-        height: 4px;
-        background-color: #ffcc00;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 0.2s ease-out;
+    .ee-values-text {
+        padding: 300px 25px 0 0;
     }
 
-    .ee-cultura-text {
-        font-size: 38px;
-        font-weight: bold;
-        color: #ffcc00;
-        display: block;
-        position: relative;
-        margin-left: 70px;
-        opacity: 0;
-        transform: translateX(50px);
-        transition: opacity 0.2s ease-out, transform 0.2s ease-out;
-    }
-
-    .ee-cultura-logo {
-        width: 25%;
-        height: auto;
-        position: absolute;
-        right: 22%;
-        top: -157%;
-        opacity: 0;
-        transform: translateX(20px);
-        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-        z-index: 1;
-    }
-
-    .ee-cultura-animate {
-        opacity: 1;
-    }
-
-    .ee-cultura-animate .ee-cultura-line-container {
-        opacity: 1;
-        width: 33%;
-    }
-
-    .ee-cultura-animate .ee-cultura-line {
-        opacity: 1;
-        transform: scaleX(1);
-    }
-
-    .ee-cultura-animate .ee-cultura-text,
-    .ee-cultura-animate .ee-cultura-logo {
-        opacity: 1;
-        transform: translateX(0);
+    .ee-values-text h3 {
+        font-size: 45px;
     }
 
 }
@@ -1335,12 +1201,22 @@ body {
 
     /* Menu - Topbar */
     header nav ul li a {
-        font-size: 20px;
+        font-size: 17px;
+    }
+
+    /* Mission, vision and values */
+    .ee-cultura-text {
+        left: 22%;
     }
 
 }
 
 @media screen and (min-width: 1440px) {
+
+    /* Menu - Topbar */
+    header nav ul li a {
+        font-size: 22px;
+    }
 
     .ee-btn-lg {
         font-size: 18px;
@@ -1360,12 +1236,25 @@ body {
         padding: 400px 25px 0 0;
     }
 
+    .ee-cultura-text {
+        font-size: 45px;
+    }
+
+    .ee-cultura-logo {
+        width: 470px;
+        top: -178%;
+    }
+
+    .ee-back-title {
+        font-size: 36px;
+    }
+
     .ee-back-text {
-        font-size: 20px;
+        font-size: 23px;
     }
 
     .ee-values-list {
-        font-size: 20px;
+        font-size: 23px;
     }
 
 }
@@ -1420,6 +1309,10 @@ body {
 
 .ee-pad-left-15 {
     padding-left: 15px;
+}
+
+.ee-pad-top-bottom-5-perc {
+    padding: 5% 0;
 }
 
 .ee-mar-30 {
