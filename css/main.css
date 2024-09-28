@@ -242,13 +242,12 @@ body {
         width: 50px;
         height: 70px;
         border-radius: 25px 25px 0 0;
-        background-color: #00465f;
         display: block;
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
-        margin: 0 auto;
+        margin: 0 48.6%;
         z-index: 100;
     }
 
@@ -346,7 +345,7 @@ body {
         border-radius: 50%;
         background: #fff;
         cursor: pointer;
-        z-index: 1000;
+        z-index: 999;
     }
 
     .WA_Chat_Widget .WA_FloatingButton svg {
@@ -553,7 +552,7 @@ body {
     }
 
     .ee-footer-logo {
-        width: 120px;
+        width: 140px;
         margin-right: 20px;
     }
 
@@ -561,8 +560,11 @@ body {
         list-style: none;
         padding: 0;
         margin: 20px 0 0 0;
-        display: flex;
-        gap: 15px;
+        display: block;
+    }
+
+    .ee-footer-links li {
+        margin-bottom: 10px;
     }
 
     .ee-footer-links li a {
@@ -577,29 +579,13 @@ body {
         color: #f3c072;
     }
 
-    .ee-footer-contact-section {
-        margin-top: 70px;
-        position: absolute;
-        left: 14%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .ee-footer-contact-btn {
-        border: none;
-        font-size: 14px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        align-self: flex-start;
-    }
-
     .ee-footer-social-icons {
         list-style: none;
         padding: 0;
-        margin: 0 0 10px;
+        margin: 10px 30px 10px 0;
         display: flex;
         justify-content: flex-end;
-        gap: 15px;
+        gap: 30px;
     }
 
     .ee-footer-social-icons li {
@@ -616,7 +602,6 @@ body {
         transform: scale(1.1);
         color: #f3c072;
     }
-
 
     .ee-footer-rights {
         text-align: center;
@@ -641,11 +626,9 @@ body {
     /* Topbar - Menu */
     header {
         width: 100%;
-        background-color: #f9f5eb;
         padding: 20px 0 15px 0;
         position: fixed;
         font-family: 'Arimo', sans-serif;
-        color: #545454;
         font-weight: bold;
         z-index: 900;
     }
@@ -665,14 +648,12 @@ body {
 
     header nav ul li:not(:last-child)::after {
         content: "|";
-        color: #e8e1ce;
         position: absolute;
         right: -10px;
     }
 
     header nav ul li a {
         text-decoration: none;
-        color: #545454;
         padding: 5px 40px;
         font-size: 16px;
         position: relative;
@@ -700,18 +681,17 @@ body {
 
     header nav ul li a:hover {
         text-decoration: none;
-        color: #000;
     }
 
     /* About section */
     .ee-text-content {
+        font-family: 'League Spartan', sans-serif;
+        font-weight: bold;
         color: #fff;
     }
 
     .ee-text-content h1 {
-        font-family: 'League Spartan', sans-serif;
         font-size: 18px;
-        font-weight: bold;
         margin-bottom: 35px;
     }
 
@@ -825,7 +805,7 @@ body {
     }
 
     .ee-values-text {
-        padding: 285px 25px 0 0;
+        padding: 265px 25px 0 0;
         align-items: end;
     }
 
@@ -961,6 +941,47 @@ body {
         transform: translateX(0);
     }
 
+    /* Solution Home Page */
+    .ee-mirror-text {
+        font-family: 'League Spartan', sans-serif;
+        color: #EAE7E2;
+        font-size: 8rem;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ee-mirror-text-reflection {
+        font-family: 'League Spartan', sans-serif;
+        color: #EAE7E2;
+        font-size: 8rem;
+        margin: 0;
+        transform: scaleY(-1);
+        opacity: 0.4;
+        filter: blur(1px);
+        margin-top: -180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ee-text-left {
+        position: relative;
+        right: -26%;
+    }
+
+    .ee-text-right {
+        position: relative;
+        left: -25%;
+    }
+
+    .ee-middle-image {
+        width: 660px;
+        height: auto;
+        vertical-align: middle;
+    }
+
 
 }
 
@@ -979,8 +1000,78 @@ body {
         font-size: 17px;
     }
 
+    .ee-values-text {
+        padding: 265px 25px 0 0;
+    }
+
     .ee-values-list {
         font-size: 17px;
+    }
+
+    /* Solutions Portfolio */
+    .ee-portfolio-navigator {
+        width: 145px;
+        height: 400px;
+        display: table;
+        position: absolute;
+        left: 15px;
+        top: 10vh;
+    }
+
+    .ee-item-counter {
+        width: 100%;
+        height: 90px;
+        display: block;
+        margin-bottom: 60px;
+        position: relative;
+    }
+
+    .ee-item-counter:before {
+        content: '';
+        display: block;
+        width: 35px;
+        height: 100%;
+        background-color: #1A324B;
+        position: absolute;
+        top: 3px;
+        left: 0;
+    }
+
+    .ee-item-counter span {
+        font-family: 'League Spartan', sans-serif;
+        font-size: 120px;
+        line-height: 120px;
+        font-weight: 600;
+    }
+
+    .ee-item-navigator {
+        width: 100%;
+        display: table;
+    }
+
+    .ee-item-navigator a {
+        width: 20px;
+        height: 1px;
+        display: block;
+        margin: 0 0 70px 35px;
+        background-color: #737373;
+    }
+
+    .ee-item-navigator a.ee-item-active {
+        width: 90px;
+        background-color: #ffad30;
+    }
+
+    .ee-item-navigator a:last-child {
+        margin-bottom: 30px;
+    }
+
+    .ee-portfolio-next-prev {
+        width: 100%;
+        height: 45px;
+        display: block;
+        background-color: #517191;
+        border-radius: 0 23px 23px 0;
     }
 
 }
@@ -1025,7 +1116,7 @@ body {
     }
 
     .ee-values-text {
-        padding: 325px 25px 0 0;
+        padding: 265px 25px 0 0;
     }
 
     .ee-values-text h3 {
@@ -1188,7 +1279,7 @@ body {
     }
 
     .ee-values-text {
-        padding: 300px 25px 0 0;
+        padding: 270px 25px 0 0;
     }
 
     .ee-values-text h3 {
@@ -1263,8 +1354,16 @@ body {
 
 /* Utility Classes */
 
+.ee-section-relative {
+    position: relative;
+}
+
 .ee-bg-blue {
     background-color: #415f7d;
+}
+
+.ee-bg-dark-blue {
+    background-color: #1A324B;
 }
 
 .ee-bg-light-gray {
@@ -1335,6 +1434,10 @@ body {
     margin-left: 30px;
 }
 
+.ee-no-pad {
+    padding: 0;
+}
+
 .ee-pad-30 {
     padding: 30px;
 }
@@ -1393,6 +1496,40 @@ body {
 
 .ee-text-gray {
     color: #7c8fa1;
+}
+
+.ee-header-bg-gray {
+    background-color: #f9f5eb;
+    color: #545454;
+}
+
+.ee-header-bg-gray nav ul li a {
+    color: #545454;
+}
+
+.ee-header-bg-blue {
+    background-color: #1a324b;
+    color: #e8e1ce;
+}
+
+.ee-header-bg-blue nav ul li a {
+    color: #fff;
+}
+
+.ee-header-bg-blue nav ul li a:hover {
+    color: #e4e4e4;
+}
+
+.ee-scroll-down-blue {
+    background-color: #00465f;
+}
+
+.ee-scroll-down-yellow {
+    background-color: #ffad30;
+}
+
+.ee-text-yellow {
+    color: #ffad30;
 }
 
 /* Behavior Classes */
