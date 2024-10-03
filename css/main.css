@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a,
 a:hover {
     text-decoration: none;
@@ -145,7 +149,6 @@ a:hover {
 }
 
 .ee-btn-yellow {
-    width: 100%;
     background-color: #f3c072;
     color: #002938;
 }
@@ -163,6 +166,71 @@ body {
 }
 
 @media screen and (min-width: 320px) {
+
+    /*Page in Progess*/
+    .ee-main-content {
+        display: none;
+    }
+
+    .ee-construction-page {
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        padding: 20px;
+        font-family: 'Glacial Indifference', sans-serif;
+        background-color: #f9f5eb;
+        color: #415f7d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .ee-construction-image {
+        width: 180px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .ee-construction-content h1 {
+        font-family: 'League Spartan', sans-serif;
+        font-size: 2.5em;
+        color: #415f7d;
+        margin-bottom: 10px;
+    }
+
+    .ee-construction-content p {
+        font-size: 1em;
+        color: #415f7d;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+    .ee-construction-social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-bottom: 12px;
+    }
+
+    .ee-construction-social-icons a {
+        font-size: 30px;
+        text-decoration: none;
+        color: #545454;
+        transition: color 0.3s ease;
+    }
+
+    .ee-construction-social-icons a:hover {
+        color: #ffad30;
+    }
+
+    .ee-construction-image-logo {
+        width: 140px;
+        height: auto;
+        padding-top: 20px;
+    }
+
+
 
     /* Preloader */
     .ee-preloader-container {
@@ -585,7 +653,7 @@ body {
         margin: 10px 30px 10px 0;
         display: flex;
         justify-content: flex-end;
-        gap: 30px;
+        gap: 45px;
     }
 
     .ee-footer-social-icons li {
@@ -616,6 +684,25 @@ body {
         font-size: 14px;
         color: #666;
     }
+
+    .email-popup {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        top: -50px;
+        left: -70px;
+        z-index: 100;
+        font-size: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .ee-footer-social-icons li {
+        position: relative;
+    }
+
 
 }
 
@@ -687,7 +774,8 @@ body {
     /* About section */
     .ee-text-content {
         font-family: 'League Spartan', sans-serif;
-        font-weight: bold;
+        padding-top: 70px;
+        /* font-weight: bold; */
         color: #fff;
     }
 
@@ -699,7 +787,6 @@ body {
     .ee-text-content p {
         font-family: 'Glacial Indifference', sans-serif;
         font-size: 14px;
-        text-align: justify;
         margin-bottom: 12px;
     }
 
@@ -942,51 +1029,27 @@ body {
         transform: translateX(0);
     }
 
-    /* Solution Home Page */
-    .ee-mirror-text {
-        font-family: 'League Spartan', sans-serif;
-        color: #EAE7E2;
-        font-size: 8rem;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .ee-mirror-text-reflection {
-        font-family: 'League Spartan', sans-serif;
-        color: #EAE7E2;
-        font-size: 8rem;
-        margin: 0;
-        transform: scaleY(-1);
-        opacity: 0.2;
-        filter: blur(1px);
-        margin-top: -180px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .ee-text-left {
-        position: relative;
-        right: -26%;
-    }
-
-    .ee-text-right {
-        position: relative;
-        left: -25%;
-    }
-
-    .ee-middle-image {
-        width: 660px;
-        height: auto;
-        vertical-align: middle;
-    }
-
 
 }
 
 @media screen and (min-width: 992px) {
+
+    .ee-btn-100 {
+        width: 100%;
+    }
+
+    .ee-main-content {
+        display: block;
+    }
+
+    .ee-construction-page {
+        display: none;
+    }
+
+    /*About Section*/
+    .ee-text-content h1 {
+        font-size: 30px;
+    }
 
     .ee-cultura-logo {
         width: 32%;
@@ -1009,6 +1072,47 @@ body {
         font-size: 17px;
     }
 
+    /* Solution Home Page */
+    .ee-mirror-text {
+        font-family: 'League Spartan', sans-serif;
+        color: #EAE7E2;
+        font-size: 7rem;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ee-mirror-text-reflection {
+        font-family: 'League Spartan', sans-serif;
+        color: #EAE7E2;
+        font-size: 7rem;
+        margin: 0;
+        transform: scaleY(-1);
+        opacity: 0.2;
+        filter: blur(1px);
+        margin-top: -150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ee-text-left {
+        position: relative;
+        right: -24%;
+    }
+
+    .ee-text-right {
+        position: relative;
+        left: -23%;
+    }
+
+    .ee-middle-image {
+        width: 480px;
+        height: auto;
+        vertical-align: middle;
+    }
+
     /* Solutions Portfolio */
     .ee-portfolio-navigator {
         width: 145px;
@@ -1023,7 +1127,7 @@ body {
         width: 100%;
         height: 90px;
         display: block;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
         position: relative;
     }
 
@@ -1040,7 +1144,7 @@ body {
 
     .ee-navigator-counter span {
         font-family: 'League Spartan', sans-serif;
-        font-size: 120px;
+        font-size: 110px;
         line-height: 120px;
         font-weight: 600;
     }
@@ -1128,6 +1232,15 @@ body {
         margin-top: 9vh;
     }
 
+    .ee-portfolio-item-info h1 {
+        font-size: 54px;
+    }
+
+    .ee-portfolio-item-info p {
+        font-size: 15px;
+        padding-right: 45px;
+    }
+
     .ee-portfolio-items-thumb {
         width: calc(100% - 30px);
         background-color: #263f59;
@@ -1194,11 +1307,11 @@ body {
     }
 
     .ee-text-content h1 {
-        font-size: 22px;
+        font-size: 35px;
     }
 
     .ee-text-content p {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .ee-back-title {
@@ -1216,6 +1329,10 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
+
+    .ee-btn-100 {
+        width: 50%;
+    }
 
     /*Logo animation home*/
     .ee-middle-text-container {
@@ -1320,6 +1437,11 @@ body {
         transform: translateX(0);
     }
 
+    /*About Section*/
+    .ee-text-content {
+        padding-top: 0;
+    }
+
     /* Mission, vision and values */
     .ee-mission-icon,
     .ee-vision-icon,
@@ -1356,6 +1478,52 @@ body {
         font-size: 45px;
     }
 
+    /*Page Solutions Home*/
+    .ee-middle-image {
+        width: 660px;
+    }
+
+    .ee-mirror-text {
+        font-size: 8rem;
+    }
+
+    .ee-mirror-text-reflection {
+        font-size: 8rem;
+    }
+
+    .ee-text-left {
+        right: -26%;
+    }
+
+    .ee-text-right {
+        left: -25%;
+    }
+
+    /*Portfolio Slider*/
+    .ee-portfolio-navigator {
+        top: 10vh;
+    }
+
+    .ee-navigator-counter span {
+        font-size: 120px;
+    }
+
+    .ee-navigator-counter {
+        margin-bottom: 60px;
+    }
+
+    .ee-item-navigator a {
+        margin: 0 0 70px 35px;
+    }
+
+    .ee-portfolio-item-info h1 {
+        font-size: 65px;
+    }
+
+    .ee-portfolio-item-info p {
+        font-size: 16px;
+    }
+
 }
 
 @media screen and (min-width: 1364px) {
@@ -1368,6 +1536,11 @@ body {
     /* Mission, vision and values */
     .ee-cultura-text {
         left: 22%;
+    }
+
+    /*Page Solutions Home*/
+    .ee-mirror-text-reflection {
+        margin-top: -180px;
     }
 
 }
@@ -1385,7 +1558,7 @@ body {
 
     /* About Section */
     .ee-text-content h1 {
-        font-size: 24px;
+        font-size: 45px;
     }
 
     .ee-text-content p {
@@ -1416,6 +1589,28 @@ body {
 
     .ee-values-list {
         font-size: 23px;
+    }
+
+    /*Page Solutions Home*/
+    .ee-middle-image {
+        width: 800px;
+    }
+
+    .ee-mirror-text {
+        font-size: 9rem;
+    }
+
+    .ee-mirror-text-reflection {
+        font-size: 9rem;
+        margin-top: -210px;
+    }
+
+    .ee-text-left {
+        right: -27%;
+    }
+
+    .ee-text-right {
+        left: -26%;
     }
 
 }

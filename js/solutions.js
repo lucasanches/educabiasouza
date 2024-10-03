@@ -34,6 +34,24 @@ function toggleChatbox() {
     chatbox.style.display = isChatboxVisible ? "block" : "none";
 }
 
+//Footer
+const emailIcon = document.getElementById('email-icon');
+const emailPopup = document.getElementById('email-popup');
+
+emailIcon.addEventListener('click', function (event) {
+    event.stopPropagation();
+    emailPopup.style.display = emailPopup.style.display === 'block' ? 'none' : 'block';
+});
+
+document.addEventListener('click', function () {
+    emailPopup.style.display = 'none';
+});
+
+emailPopup.addEventListener('click', function (event) {
+    event.stopPropagation();
+});
+
+
 //PORTFOLIO SLIDER
 
 //Declarando variáveis do slider
